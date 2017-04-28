@@ -12,21 +12,30 @@ public class TestOCAException {
 		String result = "";
 		String v = null;
 		
+//		try{
+//			try{
+//				result += "before";
+//				v.length();
+//				result += "after";
+//			} catch(NullPointerException e){
+//				result += "catch";
+//				throw new RuntimeException();
+//			} finally {
+//				result += "finally";
+//				throw new Exception();
+//			}
+//		} catch(Exception e){
+//			result += "done";
+//		} 
+//		System.out.println(result);
+
 		try{
-			try{
-				result += "before";
-				v.length();
-				result += "after";
-			} catch(NullPointerException e){
-				result += "catch";
-				throw new RuntimeException();
-			} finally {
-				result += "finally";
-				throw new Exception();
-			}
-		} catch(Exception e){
-			result += "done";
+			int i[] = new int[2];
+			System.out.println(i[4]);
+		}finally{
+			System.out.println("Hello World!");
 		}
-		return result;
+		return "";
+//		return result;
 	}
 }
